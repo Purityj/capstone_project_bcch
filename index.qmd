@@ -120,13 +120,14 @@ Deliverables will include a reproducible Quarto report, analysis scripts, docume
 
 ## Timeline
 
-The proposed timeline in @tbl-project-timeline outlines how the work will progress from proposal refinement and data validation to analysis, dashboard development, automation, and final handoff.
+The project is structured into six weekly phases, progressing from initial data exploration and scoping to iterative analysis, visualization, and modelling of each research question. The final stages focus on integrating findings into a dashboard prototype, validating results with the partner, and preparing a reproducible handoff for deployment and future use.
 
-| Phase | Weeks | Main activities |
-|---|---:|---|
-| Scoping and proposal | 1 | Confirm aims, review data tables, define assumptions, finalize proposal. |
-| Data validation | 2 | Validate linkage, missingness, categorical fields, date periods, and event logic. |
-| Core analysis | 3--4 | Build metrics, run comparisons, produce visualizations, conduct sensitivity checks. |
-| Dashboard and handoff | 5--6 | Build dashboard prototype, automate refresh workflow, document methods, validate with partners. |
+| Week | Focus |
+|------|------|
+| Wk 1 | Initial Data Exploration & Proposal (Kickoff) |
+| Wk 2 | RQ1 — EDA + Visualisation + Modelling |
+| Wk 3 | RQ2 — EDA + Visualisation + Modelling |
+| Wk 4 | RQ3 — EDA + Visualisation + Modelling |
+| Wk 5 | Dashboard Prototype + Documentation + Automation |
+| Wk 6 | Validation + Final Handoff |
 
-: Proposed project timeline {#tbl-project-timeline}
