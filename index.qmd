@@ -25,12 +25,19 @@ Before CST, laboratory orders followed a paper-heavy workflow. Providers wrote o
 
 After CST implementation, providers enter orders directly into the electronic health record (EHR). Orders are transmitted to the LIS, and Clinical Collect supports bedside patient identification and label generation. In principle, this should reduce transcription steps, improve positive patient identification, make order status more visible, reduce unnecessary collections, and improve turnaround time. @fig-system-transition illustrates how lab orders moved from handwritten requisitions and manual LIS entry to direct electronic ordering, bedside specimen labeling, and digital result reporting.
 
-::: {#fig-system-transition fig-align="center" width="90%"}
+::: {.columns}
 
-![System transition from paper-based laboratory ordering to digital laboratory ordering and specimen collection.](img/system-transition.png)
+::: {.column width="50%"}
+![Pre-CST workflow](img/pre_cst.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+![Post-CST workflow](img/post_cst.png){fig-align="center" width="100%"}
+:::
+
+:::
 
 *Source: Adapted from BCCH project slides and MDS Student Prep aims.*
-:::
 
 ## Research Questions
 
