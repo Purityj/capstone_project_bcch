@@ -63,9 +63,9 @@ Due to privacy rules, all analysis remains inside the secure environment, and pa
 
 ### Data Landscape
 
-The data is stored in a SQL Server database and accessed through the PANDA Analytic Workspace (PAWS), a secure virtual machine (VM) environment used to interact with cloud-hosted data within PANDA. This setup ensures that all analysis is performed within a governed and secure infrastructure, without the need to extract data locally.
+The data is stored in a SQL Server database and accessed through a virtual machine called PAWS. All analysis is performed within PAWS, without the need to extract data locally.
 
-The dataset is large-scale, comprising approximately 10 million records and around 100 features spanning patient encounters, laboratory orders, specimen collection events, and test results. The key tables used in this project are summarized below:
+The dataset comprise of approximately 10 million records and around 100 features. The key tables are summarized below:
 
 | Data tables | Role in analysis |
 |----|----|
@@ -105,7 +105,9 @@ Several limitations affect interpretation. First, this is an observational study
 
 ## Deliverables and Success Criteria
 
-Deliverables include a reproducible Quarto report, analysis scripts, documented derived variables, validated summary tables and figures, and a dashboard prototype. Success means clear answers to answerable questions, transparent documentation of assumptions and limitations, and an updateable workflow supporting ongoing monitoring.
+Deliverables include a reproducible analysis pipeline, documented derived variables, validated summary tables and visualizations, and a dashboard prototype for monitoring CST/CPOE performance over time.
+
+Success is defined by producing clear, defensible answers to the provided research questions using appropriate methods and validated data transformations — resulting in a usable data product that supports operational and clinical decision-making. This requires a reproducible workflow, clearly stated assumptions and limitations, and results that are statistically sound and practically meaningful in the hospital context. The dashboard should enable stakeholders to monitor laboratory indicators, identify workflow changes, and assess whether CST/CPOE is achieving its intended improvements.
 
 ## Timeline
 
