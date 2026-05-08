@@ -1,0 +1,19 @@
+# Quarto
+.quarto/
+
+# LaTeX temp files
+*.aux
+*.log
+*.out
+*.toc
+*.tex
+
+# R
+.Rhistory
+.RData
+
+# Mac
+.DS_Store
+
+# Quarto intermediates
+*_files/
