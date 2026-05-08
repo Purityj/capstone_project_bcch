@@ -67,18 +67,17 @@ The data is stored in a SQL Server database and accessed through the PANDA Analy
 
 The dataset is large-scale, comprising approximately 10 million records and around 100 features spanning patient encounters, laboratory orders, specimen collection events, and test results. The key tables used in this project are summarized below:
 
-| Data tables | Role in analysis |  
-|----|----|----|
+| Data tables | Role in analysis |
+|----|----|
 | `lis_test_result` | Main table for specimen, tube, test, collection, Clinical Collect, and cancellation/credit/delete analysis. |
 | `ehr_orders` | EHR order context, order timing, order status, cancellation details, location, provider role, and add-on status. |
 | `ehr_diagnosis` | Encounter-level diagnosis context for clinical scenario grouping and case-mix interpretation. |
 | `lis_result` | Concatenated lab result information, useful for result-level text review. |
 | `lis_result_line` | Unconcatenated result components, useful when individual result lines must be interpreted separately. |
-|  |  |
 
 : Data landscape for the linked EHR and LIS sources used in the project. {#tbl-data-landscape}
 
-The core linkage is:
+The core linkage:
 
 Patient $\to$ Encounter $\to$ Order $\to$ Accession $\to$ Tube/Container ID $\to$ Test $\to$ Result
 

@@ -231,54 +231,42 @@ Table&nbsp;1: Data landscape for the linked EHR and LIS sources used in the proj
 <div aria-describedby="tbl-data-landscape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Data tables</th>
 <th>Role in analysis</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>lis_test_result</code></td>
 <td>Main table for specimen, tube, test, collection, Clinical Collect, and cancellation/credit/delete analysis.</td>
-<td></td>
 </tr>
 <tr class="even">
 <td><code>ehr_orders</code></td>
 <td>EHR order context, order timing, order status, cancellation details, location, provider role, and add-on status.</td>
-<td></td>
 </tr>
 <tr class="odd">
 <td><code>ehr_diagnosis</code></td>
 <td>Encounter-level diagnosis context for clinical scenario grouping and case-mix interpretation.</td>
-<td></td>
 </tr>
 <tr class="even">
 <td><code>lis_result</code></td>
 <td>Concatenated lab result information, useful for result-level text review.</td>
-<td></td>
 </tr>
 <tr class="odd">
 <td><code>lis_result_line</code></td>
 <td>Unconcatenated result components, useful when individual result lines must be interpreted separately.</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>The core linkage is:</p>
+<p>The core linkage:</p>
 <p>Patient <span class="math inline">\(\to\)</span> Encounter <span class="math inline">\(\to\)</span> Order <span class="math inline">\(\to\)</span> Accession <span class="math inline">\(\to\)</span> Tube/Container ID <span class="math inline">\(\to\)</span> Test <span class="math inline">\(\to\)</span> Result</p>
 </section>
 </section>
