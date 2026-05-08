@@ -1,6 +1,6 @@
 ---
 title: "Proposal Report: Evaluating the Impact of CPOE on Pediatric Laboratory Services at BC Children's Hospital"
-author: "Athul Sasidharan, Purity Jangaya, Johnson Leung,Ruth Adwowa Yankson" 
+author: "Athul Sasidharan, Purity Jangaya, Johnson Leung, Ruth Adwowa Yankson" 
 date: "May 7, 2026"
 format:
   pdf:
