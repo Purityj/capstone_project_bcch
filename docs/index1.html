@@ -132,7 +132,7 @@ window.Quarto = {
   <li><a href="#deliverables-and-success-criteria" id="toc-deliverables-and-success-criteria" class="nav-link" data-scroll-target="#deliverables-and-success-criteria">Deliverables and Success Criteria</a></li>
   <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -170,59 +170,68 @@ window.Quarto = {
 
 <section id="executive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
-<p>BC Children’s Hospital (BCCH) implemented Computerized Provider Order Entry (CPOE) as part of the Clinical &amp; Systems Transformation (CST) initiative. These systems were intended to improve laboratory ordering, specimen collection, patient identification, workflow transparency, and access to laboratory results. This Capstone project will evaluate whether these expected benefits are reflected in the available electronic health record (EHR) and laboratory information system (LIS) data, while also identifying unintended workflow or data pattern changes that may affect pediatric laboratory service delivery.</p>
-<p>Our proposed output is a reproducible analysis workflow, a concise summary of validated findings, and a dashboard prototype that BCCH can use to monitor selected laboratory process metrics over time. The project will focus on clear, defensible, and partner relevant analysis.</p>
+<p>BC Children’s Hospital (BCCH) implemented Computerized Provider Order Entry (CPOE) and Clinical Collect as part of the Clinical &amp; Systems Transformation (CST) initiative. These systems were intended to improve laboratory ordering, specimen collection, patient identification, workflow transparency, and access to laboratory results. This project will evaluate whether these expected benefits are reflected in the available electronic health record (EHR) and laboratory information system (LIS) data, while also identifying unintended workflow or data-pattern changes that may affect pediatric laboratory service delivery.</p>
+<p>Our proposed output is a reproducible analysis workflow, a concise summary of validated findings, and a dashboard prototype that BCCH can use to monitor selected laboratory process metrics over time. The project will focus on clear, defensible, and partner-relevant analysis rather than producing a predictive model.</p>
 </section>
 <section id="background-and-system-transition" class="level2">
 <h2 class="anchored" data-anchor-id="background-and-system-transition">Background and System Transition</h2>
-<p>Before CST, laboratory orders followed a paper heavy workflow. Providers wrote orders, nurses or clerks transcribed them onto requisitions, laboratory staff manually entered them into the Laboratory Information System (LIS), and labels were generated after multiple handoffs. This led to transcription errors, duplicate work, delayed visibility, and specimen labeling problems.</p>
-<p>With the implementation of CST, providers enter orders directly into the electronic health record (EHR). Orders are transmitted to the LIS, and Clinical Collect supports bedside patient identification and label generation. In principle, this should reduce transcription steps, improve positive patient identification, reduce unnecessary collections, and improve turnaround time. <a href="#fig-system-transition" class="quarto-xref">Figure&nbsp;1</a> illustrates how lab orders moved from handwritten requisitions and manual LIS entry to direct electronic ordering, bedside specimen labeling, and digital result reporting.</p>
-<div id="fig-system-transition" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-system-transition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/system-transition.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-system-transition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: System transition from paper-based laboratory ordering to digital laboratory ordering and specimen collection.
-</figcaption>
+<p>Before CST, laboratory orders followed a paper-heavy workflow. Providers wrote orders, nurses or clerks transcribed them onto requisitions, laboratory staff manually entered them into the Laboratory Information System (LIS), and labels were generated after multiple handoffs. This led to transcription errors, duplicate work, delayed visibility, and specimen-labeling problems.</p>
+<p>After CST implementation, providers enter orders directly into the electronic health record (EHR). Orders are transmitted to the LIS, and Clinical Collect supports bedside patient identification and label generation. In principle, this should reduce transcription steps, improve positive patient identification, make order status more visible, reduce unnecessary collections, and improve turnaround time. <strong>?@fig-system-transition</strong> illustrates how lab orders moved from handwritten requisitions and manual LIS entry to direct electronic ordering, bedside specimen labeling, and digital result reporting.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/pre_cst.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Pre-CST workflow</figcaption>
 </figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/post_cst.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Post-CST workflow</figcaption>
+</figure>
+</div>
+</div>
 </div>
 <p><em>Source: Adapted from BCCH project slides and MDS Student Prep aims.</em></p>
 </section>
 <section id="research-questions" class="level2">
 <h2 class="anchored" data-anchor-id="research-questions">Research Questions</h2>
-<p>The partner seeks to understand whether replacing paper based workflows with CPOE/CST supported laboratory ordering improved pediatric service delivery, and whether the transition introduced unintended consequences. We address this through 9 analytical objectives:</p>
+<p>The partner seeks to understand whether replacing paper-based workflows with CPOE/CST-supported laboratory ordering improved pediatric service delivery, and whether the transition introduced unintended consequences. We address this through ten analytical objectives:</p>
 <ol type="1">
-<li>What proportion of blood collection events use Clinical Collect? Where in the hospital is Clinical Collect used, and how does use vary by location and time of day?</li>
-<li>Who uses Clinical Collect, and does use differ between lab and non-lab personnel? Is Clinical Collect being used correctly, based on device/collector patterns and collection-to-receipt timing?</li>
-<li>What is the rate of mislabeled specimens, and does it vary by hospital area, user group, test type, or Clinical Collect use?</li>
-<li>Have turnaround times improved for selected tests pre and post CPOE, and how do they vary by hospital location, collector group, and test type?</li>
-<li>Are incorrect, credited, cancelled, or reordered tests reduced after CST ? Where do these events occur, how often and by whom?</li>
-<li>How many orders are placed but not completed, and do incomplete order patterns vary by location or provider/workflow group?</li>
-<li>Has lab ordering been standardized? Are existing ordersets sufficient, or are providers customizing them?</li>
-<li>Did the number or frequency of blood collection events per patient change after CST, number of pokes, number of providers placing orders, and by location?</li>
-<li>Did test utilization change for selected high interest tests or hospital locations?</li>
+<li>What proportion of blood collection events use Clinical Collect?</li>
+<li>Who uses Clinical Collect, and does use differ between lab and non-lab personnel?</li>
+<li>Where in the hospital is Clinical Collect used, and how does use vary by location and time of day?</li>
+<li>Is Clinical Collect being used correctly, based on device/collector patterns and collection-to-receipt timing?</li>
+<li>What is the rate of mislabeled specimens, and does it vary by location, user group, test type, or Clinical Collect use?</li>
+<li>Have turnaround times improved for selected tests, especially receipt-to-collection or collection-to-receipt intervals that are comparable across periods?</li>
+<li>Are incorrect, credited, cancelled, or reordered tests reduced after CST, and where do these events occur?</li>
+<li>How many orders are placed but not completed, and do incomplete-order patterns vary by location or provider/workflow group?</li>
+<li>Did the number or frequency of blood collection events per patient change after CST?</li>
+<li>Did test utilization change for selected high-interest tests or hospital locations?</li>
 </ol>
 </section>
 <section id="data-exploratory-data-analysis-eda" class="level2">
 <h2 class="anchored" data-anchor-id="data-exploratory-data-analysis-eda">Data &amp; Exploratory Data Analysis (EDA)</h2>
-<p>The analysis will be conducted in the secure PAWS environment using linked EHR and LIS data from the main sources summarized in <a href="#tbl-data-landscape" class="quarto-xref">Table&nbsp;1</a> below.</p>
-<p>The observational unit varies by research question: order, order item, or test level for utilization, container ID for tube analyses (parent and child/decanted handled separately), derived collection events (accessions grouped by patient and encounter within the agreed time window) for collection analyses and test or specimen events for turnaround time.</p>
-<p>Also, initial data review highlighted several data quality and preparation issues to validate:</p>
+<p>The analysis will be conducted in the secure PAWS environment using linked EHR and LIS data from the main sources summarized in <a href="#tbl-data-landscape" class="quarto-xref">Table&nbsp;1</a> below. The main data sources are EHR order data, LIS test-result data, LIS result/result-line tables, and EHR diagnosis data.</p>
+<p>Each observational unit will vary by research question. Test utilization will be analyzed at the order, order-item, or test level, depending on the metric. Tube-related analyses will use the container ID as the main unit, with parent and child/decanted containers handled separately. Collection-related analyses will use derived blood collection events, created by grouping accessions for the same patient and encounter within the agreed collection-time window. Turnaround-time analyses will use the test or specimen event, depending on which timestamps are required.</p>
+<p>Also, initial data review highlighed several data quality and preparation issues to validate:</p>
 <ul>
 <li>Unexpected missingness in fields expected to be complete</li>
-<li>Local codes and acronyms requiring partner provided definitions</li>
+<li>Local codes and acronyms requiring partner-provided definitions</li>
 <li>EHR and LIS linkage requiring careful validation</li>
-<li>Accession identifiers not always mapping one to one to collection events</li>
+<li>Accession identifiers not always mapping one-to-one to collection events</li>
+<li>Parent, child, and aliquot container relationships affecting tube counts</li>
 <li>Add-on tests complicating interpretation of whether a new collection occurred</li>
+<li>Cancellation, credit, and delete flags requiring workflow-specific interpretation</li>
+<li>Free-text or semi-structured fields requiring parsing into structured attributes</li>
 <li>Derived analysis variables not directly available in the raw data</li>
-<li>Timestamp and duplicate record validation needed before interpretation</li>
+<li>Timestamp and duplicate-record validation needed before interpretation</li>
 </ul>
-<p>Due to NDA and privacy rules, all analysis remains inside the secure environment, and patient-level information will not be disclosed externally.</p>
+<p>Because of strict NDA and privacy rules, all analysis will remain inside the approved secure environment. Results, screenshots, and patient-level information will not be disclosed outside approved channels.</p>
 <section id="data-landscape" class="level3">
 <h3 class="anchored" data-anchor-id="data-landscape">Data Landscape</h3>
-<p>The data is stored in a SQL Server database and accessed through the PANDA Analytic Workspace (PAWS), a secure virtual machine (VM) environment used to interact with cloud-hosted data within PANDA. This setup ensures that all analysis is performed within a governed and secure infrastructure, without the need to extract data locally.</p>
-<p>The dataset is large-scale, comprising approximately 10 million records and around 100 features spanning patient encounters, laboratory orders, specimen collection events, and test results. The key tables used in this project are summarized below:</p>
 <div id="tbl-data-landscape" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-landscape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -237,41 +246,41 @@ Table&nbsp;1: Data landscape for the linked EHR and LIS sources used in the proj
 </colgroup>
 <thead>
 <tr class="header">
-<th>Data tables</th>
+<th>Data table/source</th>
 <th>Role in analysis</th>
-<th></th>
+<th>Essential fields to mention</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>lis_test_result</code></td>
 <td>Main table for specimen, tube, test, collection, Clinical Collect, and cancellation/credit/delete analysis.</td>
-<td></td>
+<td><code>patient_master_key</code>, <code>external_episode_id</code>, <code>accession_id</code>, <code>collection_dt_tm</code>, <code>receive_dt_tm</code>, <code>container_id</code>, <code>parent_container_sid</code>, <code>container_tube_type</code>, <code>phleb_device_type</code>, <code>phleb_tech_type</code>, test codes, credit/cancel/delete flags.</td>
 </tr>
 <tr class="even">
 <td><code>ehr_orders</code></td>
 <td>EHR order context, order timing, order status, cancellation details, location, provider role, and add-on status.</td>
-<td></td>
+<td>order identifiers, order timestamps, order status, cancellation reason/time, location, provider role, add-on flag.</td>
 </tr>
 <tr class="odd">
 <td><code>ehr_diagnosis</code></td>
 <td>Encounter-level diagnosis context for clinical scenario grouping and case-mix interpretation.</td>
-<td></td>
+<td>patient/encounter identifiers, diagnosis code, diagnosis description, diagnosis type.</td>
 </tr>
 <tr class="even">
 <td><code>lis_result</code></td>
 <td>Concatenated lab result information, useful for result-level text review.</td>
-<td></td>
+<td>result key and full result description.</td>
 </tr>
 <tr class="odd">
 <td><code>lis_result_line</code></td>
 <td>Unconcatenated result components, useful when individual result lines must be interpreted separately.</td>
-<td></td>
+<td>result key, sequence number, result-line description.</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
+<td>Data dictionary and glossary files</td>
+<td>Define coded fields, local acronyms, device types, collector types, and date windows.</td>
+<td>Clinical Collect device values, collector-type ranges, implementation dates.</td>
 </tr>
 </tbody>
 </table>
@@ -286,38 +295,32 @@ Table&nbsp;1: Data landscape for the linked EHR and LIS sources used in the proj
 <h2 class="anchored" data-anchor-id="data-science-approach">Data Science Approach</h2>
 <section id="data-validation-and-linkage" class="level3">
 <h3 class="anchored" data-anchor-id="data-validation-and-linkage">1. Data validation and linkage</h3>
-<p>We will first validate table linkage, date coverage, row counts, unique IDs, missingness, and categorical values. Priority fields include Clinical Collect use, collector type, tube type, accession grouping, parent/child tubes, and cancellation outcomes.</p>
+<p>We will first validate table linkage, date coverage, row counts, unique IDs, missingness, and categorical values. Particular attention will be given to fields that define Clinical Collect use, collector type, tube type, accession grouping, parent/child tubes, and cancellation outcomes.</p>
 </section>
 <section id="metric-construction" class="level3">
 <h3 class="anchored" data-anchor-id="metric-construction">2. Metric construction</h3>
-<p>We will derive analysis-ready metrics for each research question. We will group accessions from the same patient and encounter into a likely collection event when their <code>collection_dt_tm</code> values fall within a 15-minute window. Turnaround time measures will use available timestamps, prioritizing intervals that are comparable before and after CST.</p>
+<p>We will derive analysis-ready metrics for each research question. Clinical Collect use will initially be defined as <code>phleb_device_type</code> equal to <code>CC</code> or <code>WOW</code>, with other device values treated as not using Clinical Collect unless partner review suggests otherwise. Collector groups will be derived from <code>phleb_tech_type</code>, where MLA represents lab staff and nurse/ward-nurse values represent non-lab staff. Based on partner guidance, we will group accessions from the same patient and encounter into a likely collection event when their <code>collection_dt_tm</code> values fall within a 5-minute window, and we will repeat the analysis with a 10-minute window as a sensitivity check. Turnaround-time measures will use available timestamps, prioritizing intervals that are comparable before and after CST.</p>
 </section>
 <section id="descriptive-and-comparative-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="descriptive-and-comparative-analysis">3. Descriptive and comparative analysis</h3>
-<p>We will summarize metrics by implementation period, patient location, time of day, collector group, tube type, and selected tests. Visualizations will include trend lines, bar charts, heatmaps, and distribution plots. Where appropriate, simple statistical comparisons or regression models will estimate changes while accounting for location, test type, or period.</p>
+<p>We will summarize metrics by implementation period, patient location, time of day, collector group, tube type, and selected tests. Visualizations will include trend lines, bar charts, heatmaps, and distribution plots. Where appropriate, we will use simple statistical comparisons or regression models to estimate changes while accounting for location, test type, or period effects.</p>
 </section>
 <section id="dashboard-and-automated-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-and-automated-workflow">4. Dashboard and automated workflow</h3>
-<p>The dashboard will serve as an operational monitoring tool, displaying validated metrics such as Clinical Collect use rate, collection event counts, tube counts, turnaround time distributions, cancellation/credit rates, and selected test utilization trends. An automated pipeline will refresh derived tables and dashboard outputs from new data extracts with minimal manual work. Documentation will cover metric definitions, assumptions, and other instructions.</p>
+<p>The dashboard will be designed as an operational monitoring tool, not only a final presentation. It will display validated metrics such as Clinical Collect use rate, collection-event counts, tube counts, turnaround-time distributions, cancellation/credit rates, and selected test utilization trends. The analysis pipeline will be designed as an automated workflow, allowing updated data extracts to refresh derived tables and dashboard outputs with minimal manual intervention. Documentation will explain how each metric is calculated, what assumptions are used, and how future analysts can rerun the workflow.</p>
 </section>
 </section>
 <section id="key-limitations" class="level2">
 <h2 class="anchored" data-anchor-id="key-limitations">Key Limitations</h2>
-<p>Several limitations affect interpretation. First, this is an observational study, so changes after CST should not automatically be interpreted as caused by CST alone. Workflow changes, post-Covid changes, patient mix, staffing, and location specific practices may also affect results. Second, some fields are workflow dependent and may be incomplete pre-CST. Third, accession numbers do not perfectly represent blood draws as derived collection events require assumptions. Fourth, Clinical Collect correctness cannot be fully observed, device/collector combinations and timing are visible, but manual edits to collection times are not. Fifth, some location names and workflows may change over time, requiring crosswalks or partner interpretation. Finally, mislabeling may not be captured by cancellation fields and may require text mining of result descriptions.</p>
+<p>Several limitations affect interpretation. First, this is an observational study, so changes after CST should not automatically be interpreted as caused by CST alone. Workflow changes, analyzer changes, patient mix, staffing, and location-specific practices may also affect results. Second, some fields are workflow-dependent and may be incomplete at the test-row level even when information exists at the accession or collection-event level. Third, accession numbers do not perfectly represent blood draws; derived collection events require assumptions. Fourth, Clinical Collect correctness cannot be fully observed. We can assess device/collector combinations and collection-to-receipt timing, but manual changes to collection time cannot be directly identified. Fifth, some location names and workflows may change over time, requiring crosswalks or partner interpretation. Sixth, mislabeling may not be fully captured by structured cancellation fields and may require separate text mining of result descriptions. Finally, tube-type compatibility and blood-sample inclusion rules require laboratory validation before final conclusions.</p>
 </section>
 <section id="deliverables-and-success-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="deliverables-and-success-criteria">Deliverables and Success Criteria</h2>
-<p>Deliverables include a reproducible Quarto report, analysis scripts, documented derived variables, validated summary tables and figures, and a dashboard prototype. Success means clear answers to answerable questions, transparent documentation of assumptions and limitations, and an updateable workflow supporting ongoing monitoring.</p>
+<p>Deliverables will include a reproducible Quarto report, analysis scripts, documented derived variables, validated summary tables, figures, and a dashboard prototype. Success means the partner receives clear answers to answerable questions, transparent documentation of assumptions and limitations, and an updateable workflow that supports continued monitoring of pediatric laboratory service delivery.</p>
 </section>
 <section id="timeline" class="level2">
 <h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
-<p>The project is structured into six weekly phases, progressing from initial data exploration and scoping to iterative analysis, modeling, and visualization of each research question. The final stages focus on integrating findings into a dashboard prototype, validating results with the project partner, and preparing handoff of a reproducible data product for deployment and future use.</p>
-<div id="tbl-project-timeline" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-project-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Proposed project timeline
-</figcaption>
-<div aria-describedby="tbl-project-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>The project is structured into six weekly phases, progressing from initial data exploration and scoping to iterative analysis, modeling, and visualization of each research question. The final stages focus on integrating findings into a dashboard prototype, validating results with the partner, and preparing a reproducible handoff for deployment and future use.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -352,9 +355,6 @@ Table&nbsp;2: Proposed project timeline
 </tr>
 </tbody>
 </table>
-</div>
-</figure>
-</div>
 
 
 </section>
