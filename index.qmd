@@ -59,7 +59,7 @@ Also, initial data review highlighted several data quality and preparation issue
 -   Derived analysis variables not directly available in the raw data
 -   Timestamp and duplicate record validation needed before interpretation
 
-Due to NDA and privacy rules, all analysis remains inside the secure environment, and patient-level information will not be disclosed externally.
+Due to privacy rules, all analysis remains inside the secure environment, and patient-level information will not be disclosed externally.
 
 ### Data Landscape
 
