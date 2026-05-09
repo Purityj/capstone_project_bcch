@@ -1,5 +1,5 @@
 ---
-title: "Proposal Report: Evaluating the Impact of CPOE on Pediatric Laboratory Services at BC Children's Hospital"
+title: "Evaluating the Impact of CPOE on Pediatric Laboratory Services at BC Children's Hospital"
 author: "Athul Sasidharan, Purity Jangaya, Johnson Leung, Ruth Adwowa Yankson" 
 date: "May 7, 2026"
 format:
@@ -101,17 +101,17 @@ The dashboard will serve as an operational monitoring tool, displaying validated
 
 ## Key Limitations
 
-Several limitations affect interpretation. First, this is an observational study, so changes after CST should not automatically be interpreted as caused by CST alone. Workflow changes, post-Covid changes, patient mix, staffing, and location specific practices may also affect results. Second, some fields are workflow dependent and may be incomplete pre-CST. Third, accession numbers do not perfectly represent blood draws as derived collection events require assumptions. Fourth, Clinical Collect correctness cannot be fully observed, device/collector combinations and timing are visible, but manual edits to collection times are not. Fifth, some location names and workflows may change over time, requiring crosswalks or partner interpretation. Finally, mislabeling may not be captured by cancellation fields and may require text mining of result descriptions.
+Several limitations affect interpretation. First, this is an observational study — changes observed after CST should not be automatically attributed to CST alone, as workflow changes, post-COVID recovery, patient mix, staffing, and location-specific practices may all contribute. Second, some fields are workflow-dependent and may be incomplete for the pre-CST period. Third, accession numbers do not perfectly represent individual blood draws, as deriving collection events requires assumptions. Fourth, Clinical Collect status cannot be fully verified — while device and collector combinations and timing are visible, manual edits to collection times are not. Fifth, location names and workflows may change over time, requiring crosswalks or partner clarification. Finally, mislabeling may not be captured by cancellation fields alone and may require text mining of result descriptions.
 
 ## Deliverables and Success Criteria
 
 Deliverables include a reproducible analysis pipeline, documented derived variables, validated summary tables and visualizations, and a dashboard prototype for monitoring CPOE performance over time.
 
-Success is defined by producing clear, defensible answers to the provided research questions using appropriate methods and validated data transformations. This requires a reproducible workflow, clearly stated assumptions and limitations, and results that are statistically sound and practically meaningful in the hospital context. The dashboard should enable stakeholders to monitor laboratory indicators, identify workflow changes, and assess whether CPOE is achieving its intended improvements.
+Success is defined by producing clear, defensible answers to the provided research questions using appropriate methods and validated data transformations. This requires a reproducible workflow, clearly stated assumptions and limitations, and results that are statistically sound and practically meaningful in the hospital context. The dashboard should enable stakeholders to monitor CPOE performance, identify workflow changes, and assess whether CPOE is achieving its intended benefits.
 
 ## Timeline
 
-The project is structured into six weekly phases, progressing from initial data exploration and scoping to iterative analysis, modeling, and visualization of each research question. The final stages focus on integrating findings into a dashboard prototype, validating results with the project partner, and preparing handoff of a reproducible data product for deployment and future use.
+The project spans six weekly phases, moving from data exploration and scoping through iterative analysis, modeling, and visualization, to a final dashboard prototype, partner validation, and handoff.
 
 | Week | Focus |
 |------|------|
